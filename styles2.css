@@ -21,7 +21,7 @@ body {
    padding-top: 30px;
    padding-bottom: 30px;
    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-   animation: shake 0.5s ease-in-out 5;
+   animation: shake 0.3s ease-in-out 5;
 }
 
 @keyframes shake {
