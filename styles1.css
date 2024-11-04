@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:700');
+
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centra verticalmente */
+    height: 100vh;
+    overflow: hidden; /* Evita el desplazamiento */
+}
+
+#txt {
+    font-size: 19px;
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Asegura que los elementos se apilen */
+    align-items: center;
+}
+
+p {
+    margin: 0;
+    border-right: solid 3px rgba(166, 128, 140, 1);
+    white-space: nowrap; /* Mantiene el texto en una sola línea */
+    overflow: hidden;    
+    /*font-family: 'Source Code Pro', monospace;*/  
+    color: #999;
+    font-weight: normal;
+    letter-spacing: 1px;
+    max-width: 90vw; /* Limita el ancho a 90% del ancho de la pantalla */
+    box-sizing: border-box; /* Incluye padding y border en el ancho total */
+    opacity: 0; /* Oculta el texto inicialmente */
+}
+
+/* Animation for first paragraph */
+.first-paragraph {
+    animation: animated-text 4s steps(29, end) 0s forwards,
+               animated-cursor 600ms steps(29, end) infinite;
+}
+
+/* Animation for second paragraph */
+.second-paragraph {
+    animation: animated-text-2 5s steps(29, end) 4s forwards,
+               animated-cursor 600ms steps(29, end) infinite;
+}
+
+/* Text animation */
+@keyframes animated-text {
+    0% { width: 0; opacity: 0; } /* Empieza oculto */
+    99% { width: 100%; opacity: 1; } /* Se expande hasta mostrar todo el texto */
+    100% { width: 100%; opacity: 1; border-right-color: transparent; } /* Detiene el cursor al final */
+}
+
+@keyframes animated-text-2 {
+    0% { width: 0; opacity: 0; } /* Empieza oculto */
+    99% { width: 100%; opacity: 1; } /* Se expande hasta mostrar todo el texto */
+    100% { width: 100%; opacity: 1; border-right-color: transparent; } /* Detiene el cursor al final */
+}
+
+@keyframes animated-cursor {
+    from { border-right-color:rgba(166, 128, 140, 1); }
+    to { border-right-color: transparent; }
+}
+
+#btn {
+    display: flex; /* Usar flexbox para centrar el contenido */
+    align-items: center; /* Centrar verticalmente */
+    justify-content: center; /* Centrar horizontalmente */
+    text-decoration: none;
+    position: absolute; /* Posiciona el botón de forma absoluta */
+    bottom: 30%; /* Ajusta la posición vertical del botón */
+    left: 50%; /* Centra horizontalmente */
+    transform: translate(-50%, 50%); /* Compensa el ancho del botón para centrarlo */
+    width: 60px; /* Ancho del botón */
+    height: 60px; /* Alto del botón */
+    border: none; /* Sin borde */
+    border-radius: 50%; /* Forma circular */
+    background-color: rgba(166, 128, 140, 1); /* Color de fondo */
+    color: white; /* Color del texto */
+    font-size: 30px; /* Tamaño de la fuente */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para efecto de elevación */
+    opacity: 0; /* Comienza oculto */
+    animation: fade-in 0.9s forwards; /* Añade animación para mostrar el botón */
+    animation-delay: 9.5s; /* Espera hasta que se complete la animación de los párrafos */
+}
+
+/* Fade-in animation for button */
+@keyframes fade-in {
+    0% { opacity: 0; }
+    100% { opacity: 1; } /* Asegúrate de que el botón se muestre */
+}
+
+#btn:hover {
+    background-color: rgba(112, 102, 119, 1); /* Color de fondo al pasar el mouse */
+}
+

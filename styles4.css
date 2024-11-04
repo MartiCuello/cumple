@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:700');
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+#aviso{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(166, 128, 140, 0.907);
+    border-radius: 7px;
+    padding: 25px;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    animation: shake 0.6s ease-in-out 5;
+ }
+ 
+ @keyframes shake {
+     0% { transform: rotate(0deg); }
+     25% { transform: rotate(2deg); }
+     50% { transform: rotate(-2deg); }
+     75% { transform: rotate(2deg); }
+     100% { transform: rotate(0deg); }
+ }
+ 
+ #txt{
+     display: flex;
+     flex-direction: column;
+     color: #e1d8d8;
+     gap: 0.2em;
+ }
+ 
+ #txt #txt1{
+     font-size: 32px;
+ }
+ 
+ #txt h1{
+     font-size: 26px;
+     margin: 10px;
+ }
+ 
+ h2{
+    margin: 0px;
+ }
+
+ #circularButton {
+    text-decoration: none;
+    position: absolute; /* Posiciona el botón de forma absoluta */
+    bottom: 30%; /* Ajusta la posición vertical del botón */
+    left: 50%; /* Centra horizontalmente */
+    transform: translate(-50%, 50%); /* Compensa el ancho del botón para centrarlo */
+    width: 60px; /* Ancho del botón */
+    height: 60px; /* Alto del botón */
+    border: none; /* Sin borde */
+    border-radius: 50%; /* Forma circular */
+    background-color: rgba(166, 128, 140, 1); /* Color de fondo */
+    color: white; /* Color del texto */
+    font-size: 30px; /* Tamaño de la fuente */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para efecto de elevación */
+    transition: background-color 0.3s; /* Transición suave para cambios de color */
+    display: flex; /* Usar flexbox para centrar el contenido */
+    align-items: center; /* Centrar verticalmente */
+    justify-content: center; /* Centrar horizontalmente */
+}
+
+#circularButton:hover {
+    background-color: rgba(112, 102, 119, 1); /* Color de fondo al pasar el mouse */
+}

@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:700');
+
+body {
+    margin:0px;
+    text-align:center;
+    padding-top:43vh;
+    color:rgba(214, 207, 203, 1);
+    font-family:'Roboto';
+    font-size:36px;
+    font-weight:100;
+    overflow:hidden;
+    animation:bg 5s linear infinite;
+  }
+
+#container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #container p {
+    margin: 0;
+  }
+
+  #btn {
+    display: flex; /* Usar flexbox para centrar el contenido */
+    align-items: center; /* Centrar verticalmente */
+    justify-content: center; /* Centrar horizontalmente */
+    text-decoration: none;
+    position: absolute; /* Posiciona el botón de forma absoluta */
+    bottom: 30%; /* Ajusta la posición vertical del botón */
+    left: 50%; /* Centra horizontalmente */
+    transform: translate(-50%, 50%); /* Compensa el ancho del botón para centrarlo */
+    width: 60px; /* Ancho del botón */
+    height: 60px; /* Alto del botón */
+    border: none; /* Sin borde */
+    border-radius: 50%; /* Forma circular */
+    background-color: rgba(214, 207, 203, 1); /* Color de fondo */
+    color: rgba(166, 128, 140, 1);/* Color del texto */
+    font-size: 30px; /* Tamaño de la fuente */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para efecto de elevación */
+}
+
+
+#btn:hover {
+    background-color: rgba(112, 102, 119, 1); /* Color de fondo al pasar el mouse */
+}
+  
+  .dropping-texts {
+    display: inline-block;
+    width: 180px;
+    text-align: left;
+    height: 36px;
+    vertical-align: -2px;
+  }
+  
+  .dropping-texts > div {
+    font-size:0px;
+    opacity:0;
+    margin-left:-30px;
+    position:absolute;
+    font-weight:300;   
+    box-shadow: 0px 60px 25px -20px rgba(0,0,0,0.5);
+  }
+  
+  .dropping-texts > div:nth-child(1) {
+    animation: roll 5s linear infinite 0s;
+  }
+  .dropping-texts > div:nth-child(2) {
+    animation: roll 5s linear infinite 1s;
+  }
+  .dropping-texts > div:nth-child(3) {
+    animation: roll 5s linear infinite 2s;
+  }
+  .dropping-texts > div:nth-child(4) {
+    animation: roll2 5s linear infinite 3s;
+  }
+  
+  @keyframes roll {
+    0% {
+      font-size:0px;
+      opacity:0;
+      margin-left:-30px;
+      margin-top:0px;
+      transform: rotate(-25deg);
+    }
+    3% {
+      opacity:1;
+      transform: rotate(0deg);
+    }
+    5% {
+      font-size:inherit;
+      opacity:1;
+      margin-left:0px;
+      margin-top:0px;
+    }
+    20% {
+      font-size:inherit;
+      opacity:1;
+      margin-left:0px;
+      margin-top:0px;
+      transform: rotate(0deg);
+    }
+    27% {
+      font-size:0px;
+      opacity:0.5;
+      margin-left:20px;
+      margin-top:100px;
+    }
+    100% {
+      font-size:0px;
+      opacity:0;
+      margin-left:-30px;
+      margin-top:0px;
+      transform: rotate(15deg);
+    }
+  }
+  
+  @keyframes roll2 {
+    0% {
+      font-size:0px;
+      opacity:0;
+      margin-left:-30px;
+      margin-top:0px;
+      transform: rotate(-25deg);
+    }
+    3% {
+      opacity:1;
+      transform: rotate(0deg);
+    }
+    5% {
+      font-size:inherit;
+      opacity:1;
+      margin-left:0px;
+      margin-top:0px;
+    }
+    30% {
+      font-size:inherit;
+      opacity:1;
+      margin-left:0px;
+      margin-top:0px;
+      transform: rotate(0deg);
+    }
+    37% {
+      font-size:1500px;
+      opacity:0;
+      margin-left:-1000px;
+      margin-top:-800px;
+    }
+    100% {
+      font-size:0px;
+      opacity:0;
+      margin-left:-30px;
+      margin-top:0px;
+      transform: rotate(15deg);
+    }
+  }
+  
+  @keyframes bg {
+    0% {background: rgba(166, 128, 140, 1);}
+    3% {background: rgba(166, 128, 140, 1);}
+    20% {background: rgba(166, 128, 140, 1);}
+    23% {background: rgba(112, 102, 119, 1);}
+    40% {background: rgba(112, 102, 119, 1);}
+    43% {background: rgba(204, 183, 174, 1);}
+    60% {background: rgba(204, 183, 174, 1);}
+    63% {background: rgba(86, 82, 100, 1);}
+    80% {background: rgba(86, 82, 100, 1);}
+    83% {background: rgba(86, 82, 100, 1);}
+    100% {background: rgba(86, 82, 100, 1);}
+  }

@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:700');
+
+body {
+  margin:0px;
+  font-family:'Roboto';
+  text-align:center;
+  position: relative;
+  height: 100vh;
+}
+
+#presentacion{
+  color:#999;
+  text-transform: uppercase;
+  font-size:36px;
+  font-weight:bold;
+  position:fixed;
+  width:100%;
+  bottom:45%;
+  display:block;
+}
+
+h1{
+    font-size: 40px;
+    margin: 0;
+}
+
+h2{
+    font-size: 34px;
+    margin: 5px;
+}
+
+#flip {
+  height:50px;
+  overflow:hidden;
+}
+
+#flip > div > div {
+  color:#fff;
+  padding:4px 12px;
+  height:45px;
+  margin-bottom:45px;
+  display:inline-block;
+}
+
+#flip div:first-child {
+  animation: show 5s linear infinite;
+}
+
+#flip div div {
+  background:rgba(166, 128, 140, 1);
+}
+#flip div:first-child div {
+  background:rgba(112, 102, 119, 1);
+}
+#flip div:last-child div {
+  background:rgba(204, 183, 174, 1);
+}
+
+@keyframes show {
+  0% {margin-top:-270px;}
+  5% {margin-top:-180px;}
+  33% {margin-top:-180px;}
+  38% {margin-top:-90px;}
+  66% {margin-top:-90px;}
+  71% {margin-top:0px;}
+  99.99% {margin-top:0px;}
+  100% {margin-top:-270px;}
+}
+
+#circularButton {
+    text-decoration: none;
+    position: absolute; /* Posiciona el botón de forma absoluta */
+    bottom: 30%; /* Ajusta la posición vertical del botón */
+    left: 50%; /* Centra horizontalmente */
+    transform: translate(-50%, 50%); /* Compensa el ancho del botón para centrarlo */
+    width: 60px; /* Ancho del botón */
+    height: 60px; /* Alto del botón */
+    border: none; /* Sin borde */
+    border-radius: 50%; /* Forma circular */
+    background-color: rgba(166, 128, 140, 1); /* Color de fondo */
+    color: white; /* Color del texto */
+    font-size: 30px; /* Tamaño de la fuente */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para efecto de elevación */
+    transition: background-color 0.3s; /* Transición suave para cambios de color */
+    display: flex; /* Usar flexbox para centrar el contenido */
+    align-items: center; /* Centrar verticalmente */
+    justify-content: center; /* Centrar horizontalmente */
+}
+
+#circularButton:hover {
+    background-color: rgba(112, 102, 119, 1); /* Color de fondo al pasar el mouse */
+}
