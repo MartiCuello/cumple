@@ -43,7 +43,7 @@ h2{
 }
 
 #flip div:first-child {
-  animation: show 5s linear infinite;
+  animation: show 4s linear infinite;
 }
 
 #flip div div {
