@@ -36,13 +36,13 @@ p {
 
 /* Animation for first paragraph */
 .first-paragraph {
-    animation: animated-text 4s steps(29, end) 0s forwards,
+    animation: animated-text 2s steps(29, end) 0s forwards,
                animated-cursor 600ms steps(29, end) infinite;
 }
 
 /* Animation for second paragraph */
 .second-paragraph {
-    animation: animated-text-2 5s steps(29, end) 4s forwards,
+    animation: animated-text-2 3s steps(29, end) 2s forwards,
                animated-cursor 600ms steps(29, end) infinite;
 }
 
