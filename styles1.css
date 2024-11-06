@@ -84,7 +84,7 @@ p {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para efecto de elevación */
     opacity: 0; /* Comienza oculto */
     animation: fade-in 0.9s forwards; /* Añade animación para mostrar el botón */
-    animation-delay: 9.5s; /* Espera hasta que se complete la animación de los párrafos */
+    animation-delay: 5s; /* Espera hasta que se complete la animación de los párrafos */
 }
 
 /* Fade-in animation for button */
